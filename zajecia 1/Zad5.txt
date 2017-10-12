@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(){
+	char a,b,c,d;
+	
+	printf("Podaj pierwszy znak\n");
+	scanf("%c\n",&a); // mozna uzyc bufforu by ³adniej siê wyœwietla³o
+	printf("Podaj drugi znak\n");
+	scanf("%c\n",&b);
+	printf("Podaj trzeci znak\n");
+	scanf("%c\n",&c);
+	printf("Podaj czwarty znak\n");
+	scanf("%c",&d);
+	
+	printf("%c,%c,%c,%c\n",a,b,c,d);
+	printf("%c,%c,%c,%c\n",b,a,c,d);
+	printf("%c,%c,%c,%c\n",b,c,a,d);
+	printf("%c,%c,%c,%c\n",b,a,d,c);
+	printf("%c,%c,%c,%c\n",b,d,c,a);
+	printf("%c,%c,%c,%c\n",b,c,d,a);
+	printf("%c,%c,%c,%c\n",b,d,a,c);
+	printf("%c,%c,%c,%c\n",a,c,b,d);
+	printf("%c,%c,%c,%c\n",a,c,d,b);
+	printf("%c,%c,%c,%c\n",a,d,c,b);
+	printf("%c,%c,%c,%c\n",a,b,c,d);
+	printf("%c,%c,%c,%c\n",a,c,b,d);
+	printf("%c,%c,%c,%c\n",c,a,b,d);
+	printf("%c,%c,%c,%c\n",c,a,d,b);
+	printf("%c,%c,%c,%c\n",c,b,a,d);
+	printf("%c,%c,%c,%c\n",c,d,b,a);
+	printf("%c,%c,%c,%c\n",c,b,d,a);
+	printf("%c,%c,%c,%c\n",c,d,a,b);
+	printf("%c,%c,%c,%c\n",d,c,b,a);
+	printf("%c,%c,%c,%c\n",d,a,c,b);
+	printf("%c,%c,%c,%c\n",d,a,b,c);
+	printf("%c,%c,%c,%c\n",d,c,a,b);
+	printf("%c,%c,%c,%c\n",d,b,c,a);
+	printf("%c,%c,%c,%c\n",d,b,a,c);
+	return 0;
+}

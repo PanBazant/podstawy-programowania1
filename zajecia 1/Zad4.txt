@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+	int a;
+	int x;
+	int b;
+	int y;
+	printf("Podaj pierwsza liczbe\n");
+	scanf("%d",&a);
+	printf("Podaj druga liczbe\n");
+	scanf("%d",&x);
+	printf("Podaj druga liczbe\n");
+	scanf("%d",&b);
+	y=a*x+b;
+	printf("%d",y);
+	
+	
+	return 0;
+}

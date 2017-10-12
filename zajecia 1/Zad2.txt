@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+int main(){
+	// int xd;
+	printf("Witaj zono");
+	return 0;
+}

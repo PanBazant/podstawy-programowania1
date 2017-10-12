@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+
+
+float a;
+float b;
+float h;
+float objetosc;
+
+printf("Podaj pierwsza krawedz podstawy\n");
+scanf("%f",&a);
+printf("Podaj druga krawedz podstawy\n");
+scanf("%f",&b);
+printf("Podaj wysokosc\n");
+scanf("%f",&h);
+objetosc=a*b*h;
+printf("Objetosc wynosi %f",objetosc);4
+
+
+return 0;
+}

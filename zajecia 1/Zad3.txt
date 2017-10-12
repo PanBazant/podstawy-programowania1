@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+	int a,b;
+	int c,d,f,g;
+	c=a+b;
+	d=a-b;
+	f=a*b;
+	g=a%b;
+	printf("Podaj pierwsza liczbe \n");
+	scanf("%d",&a);
+	printf("Podaj druga liczbe \n");
+	scanf("%d",&b);
+	
+	
+	return 0;
+}
