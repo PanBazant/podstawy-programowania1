@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main(){
+	float a;
+	float b;
+	float x;
+	float y;
+	printf("Podaj a\n");
+	scanf("%d",&a);
+    printf("Podaj b\n");
+    scanf("%d",&b);
+    printf("Podaj x\n");
+	scanf("%d",&x);
+	
+	if(a>0){ printf("Funkcja przechodzi przez I i III cwiartke\n");
+	}
+	if(a<0){
+		printf("Funkcja przechodzi przez II i IV cwiartke\n");
+	}
+	if(a>0 && b>0){
+			printf("Funkcja przechodzi przez I,II i III cwiartke\n");
+	}
+	if(a>0 && b<0){
+			printf("Funkcja przechodzi przez I,III i IV cwiartke\n");
+	}
+	if(a<0 && b>0){
+			printf("Funkcja przechodzi przez I,II,IV cwiartke\n");
+	}
+	if(a<0 && b<0){
+			printf("Funkcja przechodzi przez II,III i IV cwiartke\n");
+	}
+	if(a==0 && b>0){
+			printf("Funkcja przechodzi przez I i II cwiartke\n");
+	}
+	if(a==0 && b<0){
+			printf("Funkcja przechodzi przez III i IV cwiartke\n");
+	}
+	if(a>0 && b==0){
+			printf("Funkcja przechodzi przez I i III cwiartke\n");
+	}
+	if(a<0 && b==0){
+			printf("Funkcja przechodzi przez II i IV cwiartke\n");
+	}
+	else { 	
+	printf("Funkcja przez nic nie przechodzi\n");
+	}
+	return 0;
+}

@@ -1,0 +1,67 @@
+#include <stdio.h>
+ 
+int iloscDzielnikow(int n){
+    int j = 0;
+    int i;
+    for(i = 1; i <= n; i++){
+        if(n%i == 0){
+            j++;
+        }
+    }
+   
+    return j;
+}
+ 
+void wypelnij(int dzielniki[], int ilosc, int liczba){
+ 
+    int z = 0;
+    int i;
+    for(i = 1; z < ilosc; i++){
+        if(liczba%i == 0){
+            dzielniki[z++] = i;
+        }
+    }
+}
+ 
+int nwd(int a[], int wielkosca, int b[], int wielkoscb){
+    int wynik[wielkosca];
+    int ilosc = 0;
+    int i,j;
+    for(i = 0; i < wielkosca; i++) {
+        for(j = 0; j < wielkoscb; j++) {
+            if(a[i] == b[j]) {
+                wynik[ilosc++] = a[i];
+            }
+        }
+    }
+   
+    return wynik[ilosc-1];
+}
+ 
+ 
+int main(){
+    int a;
+    int b;
+    int x;
+    int y;
+   
+    printf("Podaj pierwsza liczbe \n");
+    scanf("%d",&a);
+    printf("Podaj druga liczbe \n");
+    scanf("%d",&b);
+   
+    x=iloscDzielnikow(a);
+    y=iloscDzielnikow(b);
+   
+    int aa[x];
+    int bb[y];
+   
+    wypelnij(aa, x, a);
+    wypelnij(bb, y, b);
+   
+    int n =  nwd(aa, x, bb, y);
+   
+    printf("NWD: %d\n", n);
+ 
+    return 0;
+}
