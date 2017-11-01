@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int (float a,float b){
+int same(float a,float b){
     int x,y;
     x=a;
     y=b;
