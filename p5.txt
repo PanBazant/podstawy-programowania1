@@ -1,0 +1,13 @@
+int potega(int n, int x){
+		int i,q;
+		q=n;
+		if(x==0) return 1;
+		else{
+		
+		for(i=1;i<x;i++){
+			n=q*n;
+		}
+		
+		return n;
+	}
+	}

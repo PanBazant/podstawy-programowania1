@@ -1,0 +1,12 @@
+int pierwsze (unsigned int n){
+		int i,j;
+		for(i= n+1;;i++) {
+  int pierwsza=1;
+  for(j=2;j<n;j++)
+    if(i%j==0) {
+       pierwsza=0;
+       break;
+    }
+ if(pierwsza)
+   return i;
+}
