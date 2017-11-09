@@ -1,0 +1,7 @@
+const int N=80;
+void wypelnij(int *tab) {
+	int i=0;
+    for (;i<=N;i+=2) {
+        *(tab++)=i; //tab[0] bez wprowadzania kolejnej zmiennej
+    }
+}

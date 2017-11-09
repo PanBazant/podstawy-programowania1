@@ -1,0 +1,4 @@
+#include <stdbool.h>
+bool trojkat(float a,float b,float c){
+		return(a+b>c && b+c>a && a+c>b);
+}

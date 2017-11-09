@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+	int i;
+	float tab[5];
+	for(i=0;i<5;i++){
+		printf("Podaj %d liczbe\n",i+1);
+		scanf("%f",&tab[i]);
+	}
+	float suma=0;
+	float srednia;
+	srednia=suma/5;
+	for(i=0;i<5;i++){
+		suma=tab[i]+suma;
+	}
+		srednia=suma/5;
+
+	printf("Suma liczb wynosi %f, a ich srednia arytmetyczna %f\n",suma,srednia);
+	
+	return 0;
+}

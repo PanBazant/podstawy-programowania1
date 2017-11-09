@@ -1,0 +1,23 @@
+void funkcja(int tab[],int n){
+    int i,z;
+    for(i=0;i<n;i++){
+        printf("Podaj %d wartosc tablicy\n ");
+       
+            /* le...
+            if( for(z=i;z>0;z--){ tab[z]==tab[z-1];} )
+            { printf("Podaj inna wartosc niz poprzednie");
+             scanf("%d",&tab[i]);
+            }
+            */
+ 
+            // Dobrze
+            for(z=i;z>0;z--){
+                if(tab[z]==tab[z-1])
+                {
+                    printf("Podaj inna wartosc niz poprzednie");
+                    scanf("%d",&tab[i]);
+                }
+            }
+ 
+            scanf("%d",&tab[i]);
+    }

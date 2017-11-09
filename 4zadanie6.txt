@@ -1,0 +1,10 @@
+void polacz(int tab1[],int tab2[],int tab3[],int n){
+	int i;
+		for(i=0;i<2*n;i++)
+			if(i%2==0){
+				tab1[i]=tab2[i];
+			}
+			if(i%2!=0){
+				tab1[i]=tab2[i];
+			}
+}
