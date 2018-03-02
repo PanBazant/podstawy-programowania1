@@ -1,0 +1,25 @@
+//'main' method must be in a class 'Rextester'.
+//Compiler version 1.8.0_111
+
+import java.util.*;
+import java.lang.*;
+
+class Rextester
+{  
+    public static void main(String args[])
+    {   String data = "AGGGCTGCTCTAAAACGTT";
+        int A=0, C=0, G=0, T=0;
+        for(int i=0;i<data.length();i++){
+            if(data.substring(i,i+1).equals("A"))
+                A++;
+            else if(data.substring(i,i+1).equals("C"))
+                C++;
+                else if(data.substring(i,i+1).equals("G"))
+                G++;
+            else if(data.substring(i,i+1).equals("T"))
+                T++;
+            
+    }
+            System.out.printf("%d %d %d %d", A, C, T, G);
+         
+    }}
