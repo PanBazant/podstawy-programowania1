@@ -20,6 +20,6 @@ class Rextester
                 T++;
             
     }
-            System.out.printf("%d %d %d %d", A, C, T, G);
+            System.out.printf("%d %d %d %d", A, C, G, T);
          
     }}
