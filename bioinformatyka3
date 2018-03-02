@@ -1,0 +1,21 @@
+import java.util.*;
+import java.lang.*;
+
+class Rextester
+{  
+    public static void main(String args[])
+    {   String data = "AAACCCTTCA";
+        String res1="";
+     for (int i=0;i<data.length();i++)
+         if (data.substring(i,i+1).equals("A"))
+            res1="A"+res1;
+           else if (data.substring(i,i+1).equals("C"))
+            res1="C"+res1;
+           else if (data.substring(i,i+1).equals("G"))
+            res1="G"+res1;
+           else if (data.substring(i,i+1).equals("T"))
+            res1="T"+res1;
+         System.out.print(res1);
+    }
+    
+}
