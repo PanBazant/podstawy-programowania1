@@ -1,0 +1,24 @@
+//'main' method must be in a class 'Rextester'.
+//Compiler version 1.8.0_111
+
+import java.util.*;
+import java.lang.*;
+
+class Rextester
+{  
+    public static void main(String args[])
+    {
+        long n=34;
+        long k=5;
+        
+        System.out.println(rabbits(n,k));
+    }
+    public static long rabbits(long n, long k)
+    { 
+        if(n==1 || n==2)
+            return 1;
+        else
+            return rabbits(n-1,k) + k*rabbits(n-2,k);
+    
+    }
+}
