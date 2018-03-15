@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+class Placeholder{
+public:
+    Placeholder(){
+        cout<< "constructed\n";
+        arr =new int[10];
+    }
+    ~Placeholder(){
+        cout<< "destructed\n";
+        delete [] arr;
+    }
+    static int a;
+    
+};
+
+int main()
+{
+    Placeholder *p=new Placeholder;
+    p->a=5;
+    Placeholder::a=5; // dla calej klasy
+    //p->a=5; dla obiektu
+    Placeholder *a=new Placeholder;
+    
+    
+    delete p;
+   
+    
+    
+    return 0;
+}
