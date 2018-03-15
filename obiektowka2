@@ -1,0 +1,72 @@
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+
+
+class Villager{
+    string name;
+    int age;
+    int maxAge;
+    bool sex;
+    string maleNames[5]={"Ragnar","Bogumil","Boleslaw","Kazimierz","Brajan"};
+    string femaleNames[5]={"Dobrawa","Bogumiła","Wanda","Katarzyna","Karyna"};
+    static bool randomized;
+public:
+    Villager(string name, int maxAge, int age, bool sex){
+        this->name=name;
+        this->age=age;
+        this->maxAge=maxAge;
+        this->sex=sex;
+    }
+
+    Villager(){
+        if(!randomized)
+           { srand(time(NULL));
+        randomized=true;
+        }
+
+        age=0;
+        maxAge=rand()%101;
+        sex=rand()%2;
+        if(sex)
+            name=maleNames[rand()%5];
+        else
+            name=femaleNames[rand()%5];
+    }
+};
+
+
+class Household{
+    int capacity=cap;
+    Villager **room;
+    room=new Villager*[cap];
+    room[0]=owner;
+    for(int i=1;i<cap;i++){
+        room[i]=nullptr;
+    }
+public:
+    Household(Villager *owner,int cap);
+    void advance(){
+        for(int i=0; i<capacity;i++){
+            if(room[i])
+                room[i]->advance;
+        }
+    }
+    
+    string ident() {
+        string result;
+        for(int i=0; i<capacity;i++)
+            if(room[i])
+            result += room[i]->ident;
+            return result;
+    }
+};
+
+int main()
+{
+
+  cout<<rand()%101;
+    return 0;
+}
