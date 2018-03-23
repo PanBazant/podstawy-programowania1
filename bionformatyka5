@@ -1,0 +1,38 @@
+//'main' method must be in a class 'Rextester'.
+//Compiler version 1.8.0_111
+
+import java.util.*;
+import java.lang.*;
+
+class Rextester
+{  
+    public static void main(String args[])
+    {
+        String sample="MA";
+        String s="";
+        int result=1;
+        for(int i=0;i<sample.length();i++)
+        {
+            s=sample.substring(i,i+1);
+            if(s.equals("L") || s.equals("S") || s.equals("R"))
+                result*=6;
+            else if(s.equals("P")|| s.equals("T")|| s.equals("V")|| s.equals("A") || s.equals("6"))
+                result *=4;
+                else if(s.equals("I"))
+                        result*=3;
+            else if(s.equals("F")|| s.equals("Y")|| s.equals("C")|| s.equals("H") || s.equals("Q")||s.equals("N") || s.equals("K") || s.equals("D")||s.equals("E"))
+                        result*=2;
+                        else if(s.equals("W") || s.equals("M"))
+                        result*=1;
+                        if(result > 1000000)
+                        result=result%1000000;
+                        }
+                        result*=3; 
+                        
+                        if(result > 1000000)
+                        result=result%1000000;
+                        
+         
+        System.out.println(result);
+    }
+}
