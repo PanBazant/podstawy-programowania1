@@ -1,0 +1,89 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+struct vec3 {
+float x,y,z;
+};
+
+
+vec3 operator+(const vec3 &a, const vec3 &b){
+    vec3 result;
+    result.x=a.x+b.x;
+    result.y=a.y+b.y;
+    result.z=a.z+b.z;
+    return result;
+}
+
+vec3 operator-(const vec3 &a){
+
+    return vec3{-a.x,-a.y,-a.z};
+}
+
+vec3 operator-(const vec3 &a, const vec3 &b){
+    return a+(-b);
+}
+
+vec3& operator +=(vec3& a, const vec3& b){
+    a.x+=b.x;
+    a.y+=b.y;
+    a.z+=b.z;
+    return a;
+}
+
+/*vec3 operator+(const vec3 &a,const vec3 &b, const vec3 &c){
+    vec3 result;
+    result.x=a.x+b.x+c.x;
+    result.y=a.y+b.y+c.y;
+    result.z=a.z+b.z+c.z;
+    return result;
+} */
+
+/*vec3 operator*(const vec3 &a, const vec3 &b)
+{
+    return vec3{a.y*b.z-a.z*b.y,a.y*b.z-a.z*b.y,a.y*b.z-a.z*b.y
+*/
+
+class Person{
+    string name;
+    int age;
+    vector<Person*> arr;
+  public:
+    Person(string na, int ag){
+        name=na;
+        age=ag;
+    }
+    size_t getsize(){
+        return arr.size();
+    }
+    string getname(){
+        return name;
+    }
+
+    bool operator<(const Person &b) const{
+        if(this->age<b.age)
+            return true;
+        else if(this->age>b.age)
+            return false;
+        else return this->name<b.name;
+    }
+};
+
+class A{
+ float kurs;
+public:
+ A(float k){
+     kurs=k;
+     }
+ float operator()(float waluta){
+     return kurs*waluta;
+ }
+};
+
+int main(int argc, char *argv[])
+{
+    float cena=39.99;
+    A stosunek(4.21);
+    cout << stosunek(cena) << endl;
+    return 0;
+}
