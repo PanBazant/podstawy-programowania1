@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <fcntl.h>
+int main()
+{   int sukces;
+    char bufor[512];
+    char bufor2[512]={"Papierosy, dopalacze ! Papierosy, dopalacze! Datura dla wszystkich"};
+    int xd,xd2,i;
+    char adres[30]={"/home/student/zroba/aa.txt"};
+    int fd[10];
+    for(i = 0; i < 10; i++){
+      fd[i] = open(adres,O_RDWR | O_CREAT);
+      printf("%d\n",fd[i]);
+      adres[20]++;
+    }
+    for(i = 0; i < 10; i++){
+      sukces =  write(fd[i],bufor2,50);
+      printf("ilosc wczytanych bajow w fd[%d] %d\n",i+1,sukces);
+    }
+    for(i = 0; i < 10; i++){
+      sukces =  read(fd[i],bufor,50);
+        printf("ilosc zapisanych bajtow w fd[%d] %d\n",i+1,sukces);
+    }
+    for(i = 0; i < 10; i++){
+        close(fd[i]);
+        printf("%d\n",fd[i]);
+    }
+    printf("%s\n",bufor);
+    return 0;
+}
