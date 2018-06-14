@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Klasa{
+public:
+    int a;
+};
+
+template <class Klasa>
+Klasa kl (Klasa kl1[], int n){
+    int wystapienia[n];
+    for(int i = 0; i < n; i++){
+        wystapienia[i]=0;
+    }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(kl1[i].a == kl1[j].a){
+                wystapienia[i]++;
+    }
+    }
+        int najwiecej=wystapienia[0];
+        for( int i = 0; i < n; i++){
+            if(i>0 && wystapienia[i]<wystapienia[i-1]){
+                najwiecej=wystapienia[i];
+            }
+        }
+}
+    return kl[];
+}
+int main(int argc, char *argv[])
+{
+
+    Klasa x[10];
+    for(int i = 0; i < 4; i++){
+        x[i].a = 2;
+    }
+    for(int i = 4; i < 10; i++){
+        x[i].a = 5;
+    }
+
+    cout <<" "  << endl;
+    return 0;
+}
