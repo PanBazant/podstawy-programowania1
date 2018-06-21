@@ -1,0 +1,26 @@
+#include <iostream>
+#include <memory>
+using namespace std;
+
+struct Point{ float x, y;};
+
+class Triangle{
+  float a,b,c;
+public:
+  Triangle(float a, float b, float c){
+      this->a=a; this->b=b; this->c=c;
+  }
+  friend float circumference(unique_ptr<Triangle> &t);
+};
+
+float circumference(unique_ptr<Triangle> &t) {
+    return t->a + t->b + t->c;
+}
+
+int main()
+{
+    unique_ptr<Triangle> t(new Triangle(3,4,5));
+    cout << circumference(t) << endl;
+    //przy standarzie c++14 auto t = make_unique<Triangle>(3,4,5);
+    return 0;
+}
